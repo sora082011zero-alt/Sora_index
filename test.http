@@ -1,0 +1,11 @@
+### 登録テスト
+GET http://localhost:8080/api/sectors/1
+Content-Type: application/json
+
+{
+  "tradeDate": "2026-06-17",
+  "sectorName": "電気機器",
+  "rankNo": 1,
+  "score": 5,
+  "changeRate": 2.5
+}
