@@ -1,5 +1,5 @@
-### 登録テスト
-GET http://localhost:8080/api/sectors/1
+### 業界ランキング
+GET http://localhost:8080/api/sectors/ranking
 Content-Type: application/json
 
 {
@@ -9,3 +9,4 @@ Content-Type: application/json
   "score": 5,
   "changeRate": 2.5
 }
+

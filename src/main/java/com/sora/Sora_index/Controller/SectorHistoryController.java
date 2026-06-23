@@ -1,9 +1,12 @@
 package com.sora.Sora_index.Controller;
 
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
 import java.util.List;
 import com.sora.Sora_index.Entity.SectorHistory;
 import com.sora.Sora_index.service.SectorHistoryService;
+import com.sora.Sora_index.dto.SectorRankingDto;
 
 @RestController
 @RequestMapping("/api/sectors")
@@ -30,5 +33,26 @@ public class SectorHistoryController {
     return service.findById(id)
     .orElseThrow(() -> new RuntimeException("SectorHistory not found"));
     }
+
+    @GetMapping("/name/{sectorName}")
+    public List<SectorHistory> findBySectorName(@PathVariable String sectorName) {
+    return service.findBySectorName(sectorName);
+    }
+
+    @GetMapping("/date/{tradeDate}")
+    public List<SectorHistory> findByTradeDate(
+        @PathVariable LocalDate tradeDate) {
+            return service.findByTradeDate(tradeDate);
+        }
+
+    @GetMapping("/score/{sectorName}")
+    public Integer getTotalScore(
+        @PathVariable String sectorName) {
+            return service.getTotalScore(sectorName);
+        }
     
+    @GetMapping("/ranking")
+    public List<SectorRankingDto> getSectorRanking() {
+        return service.getSectorRanking();
+    }
 }
