@@ -1,8 +1,9 @@
-POST http://localhost:8080/api/market
+POST http://localhost:8080/api/sector-index
 Content-Type: application/json
 
 {
   "tradeDate": "2026-06-25",
-  "nikkei225": 39174.25,
-  "topix": 2782.24
+  "sectorName": "電気機器",
+  "sectorIndex": 4215.80,
+  "changeRate": 3.04
 }
