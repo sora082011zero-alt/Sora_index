@@ -1,12 +1,8 @@
-### 業界ランキング
-GET http://localhost:8080/api/sectors/ranking
+POST http://localhost:8080/api/market
 Content-Type: application/json
 
 {
-  "tradeDate": "2026-06-17",
-  "sectorName": "電気機器",
-  "rankNo": 1,
-  "score": 5,
-  "changeRate": 2.5
+  "tradeDate": "2026-06-25",
+  "nikkei225": 39174.25,
+  "topix": 2782.24
 }
-
