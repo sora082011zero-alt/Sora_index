@@ -1,4 +1,5 @@
-POST http://localhost:8080/api/sector-index
+### 業界指数検索
+GET http://localhost:8080/api/sector-index/name/電気機器
 Content-Type: application/json
 
 {

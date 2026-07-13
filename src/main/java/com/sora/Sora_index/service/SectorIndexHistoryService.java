@@ -28,4 +28,8 @@ public class SectorIndexHistoryService {
     public Optional<SectorIndexHistory> findById(Long id) {
         return repository.findById(id);
     }
+
+    public List<SectorIndexHistory> findBySectorName(String sectorName) {
+    return repository.findBySectorName(sectorName);
+    }
 }

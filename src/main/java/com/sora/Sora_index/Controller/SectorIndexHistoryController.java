@@ -9,6 +9,7 @@ import com.sora.Sora_index.service.SectorIndexHistoryService;
 
 @RestController
 @RequestMapping("/api/sector-index")
+@CrossOrigin(origins = "http://localhost:5173")
 public class SectorIndexHistoryController {
 
     private final SectorIndexHistoryService service;
@@ -31,5 +32,10 @@ public class SectorIndexHistoryController {
     public SectorIndexHistory findById(@PathVariable Long id) {
         return service.findById(id)
                 .orElseThrow(() -> new RuntimeException("SectorIndexHistory not found"));
+    }
+
+    @GetMapping("/name/{sectorName}")
+    public List<SectorIndexHistory> findBySectorName(@PathVariable String sectorName) {
+        return service.findBySectorName(sectorName);
     }
 }

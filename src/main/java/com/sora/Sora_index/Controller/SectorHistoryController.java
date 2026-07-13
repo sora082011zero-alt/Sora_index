@@ -10,6 +10,7 @@ import com.sora.Sora_index.dto.SectorRankingDto;
 
 @RestController
 @RequestMapping("/api/sectors")
+@CrossOrigin(origins = "http://localhost:5173")
 public class SectorHistoryController {
 
     private final SectorHistoryService service;
